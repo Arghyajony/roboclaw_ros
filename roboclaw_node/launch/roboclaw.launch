@@ -2,7 +2,8 @@
 <launch>
 <!--don't use ttyUSB0 with jetson, use ttyACM0, ttyUSB0 will cause a lot of issue-->
     <arg name="dev" default="/dev/ttyACM0"/>
-<!--device address is important, try to check with stty -F /dev/ttyACM0   -->
+<!--device baudrate is important, try to check with stty -F /dev/ttyACM0   -->
+<!--device baudrate can be changed to 38400 as a substitute option but 115200 is a good option since it gives good data rate from encoders to jetson -->
     <arg name="baud" default="115200"/>
     <arg name="address" default="128"/>
     <arg name="max_speed" default="2.0"/>
