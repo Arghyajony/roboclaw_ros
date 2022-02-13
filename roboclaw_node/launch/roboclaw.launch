@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <launch>
-
+<!--don't use ttyUSB0 with jetson, use ttyACM0, ttyUSB0 will cause a lot of issue-->
     <arg name="dev" default="/dev/ttyACM0"/>
     <arg name="baud" default="115200"/>
     <arg name="address" default="128"/>
